@@ -101,4 +101,4 @@ Akses aplikasi di browser Anda melalui `http://localhost:8000`.
 | Role | Username / Email | Password |
 | --- | --- | --- |
 | Admin | `admin@gmail.com` | `password123` |
-| Siswa | `siswa@gmail.com` | `password123` |
+| Siswa/User | `siswa@gmail.com` | `password123` |
