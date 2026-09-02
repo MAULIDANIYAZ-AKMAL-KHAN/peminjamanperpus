@@ -1,59 +1,104 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Sistem Informasi Peminjaman Perpustakaan (PeminjamanPerpus)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Aplikasi web untuk mengelola alur peminjaman, pengembalian, serta pendataan buku dan anggota di perpustakaan secara terintegrasi dan efisien.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📌 Fitur Utama
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Manajemen Buku**: Tambah, edit, hapus, dan lihat katalog buku beserta stoknya.
+- **Manajemen Anggota**: Pengelolaan data anggota/siswa/mahasiswa yang terdaftar.
+- **Transaksi Peminjaman**: Pencatatan tanggal peminjaman dan jatuh tempo pengembalian.
+- **Transaksi Pengembalian & Denda**: Pencatatan tanggal pengembalian otomatis serta kalkulasi denda keterlambatan.
+- **Laporan/Riwayat**: Riwayat transaksi peminjaman dan statistik buku.
+- **Manajemen User/Akses**: Autentikasi (Login/Logout) untuk Admin dan Petugas.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🛠️ Teknologi yang Penggunaan
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+- **Backend / Framework**: [Sebutkan Framework, misal: Laravel / Express.js / CodeIgniter / Native PHP]
+- **Frontend**: [Sebutkan Frontend, misal: Bootstrap / Tailwind CSS / Blade / Vue.js]
+- **Database**: [Sebutkan Database, misal: MySQL / PostgreSQL]
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🚀 Cara Instalasi & Menjalankan Proyek
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Berikut adalah langkah-langkah untuk menjalankan proyek ini di lingkungan lokal (*local machine*):
 
-### Premium Partners
+### 1. Prasyarat (*Prerequisites*)
+Pastikan Anda sudah menginstal:
+- [PHP versi X.X] / [Node.js versi X.X] *(Sesuaikan dengan teknologi proyek)*
+- [Composer] / [npm]
+- Web Server (XAMPP / Laragon / MySQL Server)
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 2. Kloning Repositori
+```bash
+git clone [https://github.com/MAULIDANIYAZ-AKMAL-KHAN/peminjamanperpus.git](https://github.com/MAULIDANIYAZ-AKMAL-KHAN/peminjamanperpus.git)
+cd peminjamanperpus
 
-## Contributing
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 3. Instalasi Dependensi
 
-## Code of Conduct
+*(Jika menggunakan Laravel / PHP)*:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+composer install
 
-## Security Vulnerabilities
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+*(Jika menggunakan Node.js)*:
 
-## License
+```bash
+npm install
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```
+
+### 4. Konfigurasi Environment & Database
+
+1. Salin file `.env.example` menjadi `.env`:
+```bash
+cp .env.example .env
+
+```
+
+
+2. Buat database baru di MySQL dengan nama `db_peminjamanperpus` (atau sesuaikan).
+3. Buka file `.env` dan sesuaikan pengaturan database:
+```env
+DB_DATABASE=db_peminjamanperpus
+DB_USERNAME=root
+DB_PASSWORD=
+
+```
+
+
+
+### 5. Migration & Seeder (Jika Ada)
+
+Jalankan migrasi tabel ke database:
+
+```bash
+php artisan migrate --seed
+
+```
+
+### 6. Jalankan Aplikasi
+
+```bash
+php artisan serve
+
+```
+
+Akses aplikasi di browser Anda melalui `http://localhost:8000`.
+
+---
+
+## 👤 Akun Default (Pengujian)
+
+| Role | Username / Email | Password |
+| --- | --- | --- |
+| Admin | `admin@gmail.com` | `password123` |
+| Siswa | `siswa@gmail.com` | `password123` |
